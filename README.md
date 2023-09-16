@@ -1,4 +1,4 @@
-#picture of symbols
+### picture of symbols
 
 my code replaces a pixel with a character depending on the "brightness" of the pixel
 

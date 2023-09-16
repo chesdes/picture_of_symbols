@@ -5,7 +5,7 @@
 
 <div align="center">
   <img src="https://github.com/chesdes/picture_of_symbols/blob/master/imgs/ava%201.png" width=300 height=300 alt="picture before">
-  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/results/result.png?raw=true" width=300 height=300 alt="picture after">
+  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/results/result.png" width=300 height=300 alt="picture after">
 </div>
 
 - 1️⃣ In the fonts folder, the fonts that im used personally, you can add your own there, the main thing is to change it in the code in the settings section

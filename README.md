@@ -4,7 +4,7 @@
 <h3 align="center" >before/after</h3>
 
 <div align="center">
-  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/imgs/ava%201.png" width=300 height=300 alt="picture before">
+  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/imgs/img.png" width=300 height=300 alt="picture before">
   <img src="https://github.com/chesdes/picture_of_symbols/blob/master/results/result.png" width=300 height=300 alt="picture after">
 </div>
 

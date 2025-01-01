@@ -8,9 +8,9 @@ font_size = 76 # only even !!!
 size_multiplier = 2 #default 1 (without changes)
 color_mode = 0 # 0 - colors from the picture, 1 - your color, 2 - array
 your_color = [(255,255,255), (225,225,225), (195,195,195)] # sets the color of the symbols when color_mode == 1 or array when color_mode == 2
-img_dir = "imgs\\img.png" # image directory example: "imgs\\test.png"
+img_dir = "imgs/img.png" # image directory example: "imgs/test.png"
 background_color = (0,0,0) # background color :3
-your_font = "fonts\JetBrainsMono-Bold.ttf" #font
+your_font = "fonts/JetBrainsMono-Bold.ttf" #font
 grad_mode = 0 # default = 0 - from dark to light, 1 - from light to darkness
 
 # ---------------- !!!!! ----------------

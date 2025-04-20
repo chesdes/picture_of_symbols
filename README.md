@@ -1,17 +1,79 @@
-<h1 align="center">🎨picture of symbols </h1>
 
-<h2 align="center">🔧my code replaces a pixel with a character depending on the "brightness" of the pixel:</h2>
-<h3 align="center" >before/after</h3>
+# 📦 picture of symbols (POS) - ASCII Art Generator (Python + Pillow)
 
-<div align="center">
-  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/imgs/img.png" width=300 height=300 alt="picture before">
-  <img src="https://github.com/chesdes/picture_of_symbols/blob/master/results/result.png" width=300 height=300 alt="picture after">
-</div>
+This script converts images into ASCII art with optional color support, using a customizable gradient of characters. You can choose color modes, font size, background color, and other options.
 
-- 1️⃣ In the fonts folder, the fonts that im used personally, you can add your own there, the main thing is to change it in the code in the settings section
+## 📜 Dependencies
 
-- 2️⃣ To pass your image through the program, add it to the imgs folder, the result will appear after a while in the results folder
+- Python 3.10+
+- [Pillow](https://pypi.org/project/Pillow/)
 
-- 3️⃣ To get the best results, change the settings in the code to suit you
+To install Pillow:
+```bash
+pip install pillow
+```
 
-<h1>✨My first repository :3 Good luck!</h1>
+## 📋 Function Description
+
+```python
+generate(
+    img_dir: str, 
+    font: str, 
+    color: tuple[int, int, int] | list[tuple[int, int, int]] = None, 
+    background_color: tuple[int] = (0,0,0), 
+    font_size: int = 16, 
+    bright_limit: int = 0, 
+    size_multiplier: int = 1,
+    grad: str = ...
+) -> Image
+```
+
+### 📌 Parameters:
+
+| Parameter         | Type                                   | Description |
+|:------------------|:---------------------------------------|:----------------|
+| `img_dir`           | `str`                                    | Path to the source image |
+| `font`              | `str`                                    | Path to a `.ttf` font file |
+| `color`             | `tuple[int, int, int]` or `list[tuple[int, int, int]]` or `None` | Color of the characters: can be a single color, a list of colors, or `None` (to use the original image pixel color) |
+| `background_color`  | `tuple[int, int, int]`                  | Background color of the result image |
+| `font_size`         | `int`                                    | Font size for the ASCII characters |
+| `bright_limit`      | `int`                                    | Number of spaces at the start of the gradient (to control minimum brightness shown as symbols) |
+| `size_multiplier`   | `int`                                    | Image scaling factor |
+| `grad`              | `str`                                    | A string of characters from lightest to darkest |
+
+### 📌 Returns:
+
+- A new `PIL.Image` object containing the ASCII art image.
+
+## 📊 How It Works
+
+1. Opens the source image.
+2. Calculates the brightness of each pixel using:
+   ```
+   0.299 * R + 0.587 * G + 0.114 * B
+   ```
+3. Selects a character from the gradient string based on brightness.
+4. Draws the character onto a new image with the selected color.
+5. Returns the generated image.
+
+## 📷 Example Usage:
+
+```python
+from POS import generate
+
+img = generate(
+    img_dir = "imgs/img.png",
+    font="fonts/JetBrainsMono-Bold.ttf",
+    font_size=16,
+    size_multiplier=2,
+    bright_limit=1,
+    color=(255,255,255),
+    background_color=(10,10,10),
+    grad=".√:-=+*#%@  "
+)    
+img.save("results/result.png")
+```
+<center>
+  <img src="readme_pics/img.png" alt="before" width="650">
+  <img src="readme_pics/result.png" alt="after" width="650">
+</center>

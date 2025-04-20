@@ -1,1 +1,5 @@
 env/
+imgs/
+results/
+fonts/
+__pycache__/

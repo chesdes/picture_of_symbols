@@ -24,7 +24,7 @@ generate(
     font_size: int = 16, 
     bright_limit: int = 0, 
     size_multiplier: int = 1,
-    grad: str = ...
+    grad: str = " .:-=+*#%@"
 ) -> Image
 ```
 
@@ -62,18 +62,18 @@ generate(
 from POS import generate
 
 img = generate(
-    img_dir = "imgs/img.png",
-    font="fonts/JetBrainsMono-Bold.ttf",
-    font_size=16,
-    size_multiplier=2,
-    bright_limit=1,
-    color=(255,255,255),
-    background_color=(10,10,10),
-    grad=".√:-=+*#%@  "
-)    
-img.save("results/result.png")
+    img_dir = "img.png",
+    font = "DejaVuSansMono-Bold.ttf",
+    font_size = 18,
+    color = (230, 230, 255),
+    background_color = (10, 10, 10),
+    bright_limit = 10,
+    size_multiplier = 2,
+)
+
+img.save("result.png")
 ```
 <center>
-  <img src="readme_pics/img.png" alt="before" width="650">
-  <img src="readme_pics/result.png" alt="after" width="650">
+  <img src="readme_pics/img.png" alt="before" width="400">
+  <img src="readme_pics/result.png" alt="after" width="400">
 </center>

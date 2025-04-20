@@ -11,7 +11,7 @@ def generate(
         font_size: int = 16, 
         bright_limit: int = 0, 
         size_multiplier: int = 1,
-        grad: str = """ `-.',~"_:;^r>*?|/Licl7vz1xt}{]Ffujy2SoaZemwXPEhk6$9qKOdHDR8MWgN#BQ@ """
+        grad: str = " .:-=+*#%@"
         ) -> Image:
     
     img = Image.open(img_dir).convert("RGB")

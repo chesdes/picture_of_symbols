@@ -3,3 +3,4 @@ imgs/
 results/
 fonts/
 __pycache__/
+.DS_Store

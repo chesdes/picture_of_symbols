@@ -73,7 +73,7 @@ img = generate(
 
 img.save("result.png")
 ```
-<center>
+<div align="center">
   <img src="readme_pics/img.png" alt="before" width="350">
   <img src="readme_pics/result.png" alt="after" width="350">
-</center>
+</div>
